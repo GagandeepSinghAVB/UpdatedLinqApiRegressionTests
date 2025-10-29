@@ -17559,6 +17559,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
+								"id": "f0179578-cd14-4c50-9343-4c26bd73dae5",
 								"exec": [
 									" eval(pm.environment.get(\"PMLIB\"));  // Loads pmLib\r",
 									" console.log(pm.environment.get(\"PMLIB\"));\r",
@@ -17572,13 +17573,13 @@
 								],
 								"type": "text/javascript",
 								"packages": {},
-								"requests": {},
-								"id": "f0179578-cd14-4c50-9343-4c26bd73dae5"
+								"requests": {}
 							}
 						},
 						{
 							"listen": "test",
 							"script": {
+								"id": "635657cb-e7d7-4add-af2c-1a98e6a4a3f9",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
@@ -17588,12 +17589,14 @@
 									"pm.test(\"Message confirms successful deletion\", function () {\r",
 									"    pm.expect(response.message).to.include(\"Successfully deleted\");\r",
 									"});\r",
+									"// Parse response JSON\r",
+									"const response = pm.response.json();\r",
+									"console.log(\"Full API Response:\", JSON.stringify(response, null, 2));\r",
 									""
 								],
 								"type": "text/javascript",
 								"packages": {},
-								"requests": {},
-								"id": "635657cb-e7d7-4add-af2c-1a98e6a4a3f9"
+								"requests": {}
 							}
 						}
 					],
@@ -17743,78 +17746,97 @@
 	],
 	"variable": [
 		{
+			"id": "881f4128-06b2-45ec-941f-e2498b017622",
 			"key": "brandId",
 			"value": "536"
 		},
 		{
+			"id": "b4bdc5c2-d7ce-46ec-bac5-a3c4ecbe7ed7",
 			"key": "brandName",
 			"value": "Test Brand Production Testing Only"
 		},
 		{
+			"id": "1a4bffc3-47bb-46d1-b8ec-f2ac1e43906e",
 			"key": "brand_Name",
 			"value": "\"Test Brand Production Testing Only\""
 		},
 		{
+			"id": "8d331edd-51e0-479d-a0fa-6147154a7cdf",
 			"key": "categoryId",
 			"value": "71"
 		},
 		{
+			"id": "f0592371-f403-48be-8e80-19a99d3b8535",
 			"key": "attributeSchemaId",
 			"value": "379"
 		},
 		{
+			"id": "7ac058b3-e059-4057-8215-99f144498934",
 			"key": "langId_en",
 			"value": "en-us"
 		},
 		{
+			"id": "bc0ff780-719a-4287-9cc6-f9617060e7ab",
 			"key": "langId_fr",
 			"value": "fr-ca"
 		},
 		{
+			"id": "c211f2c1-1c27-465c-8935-d177c1af1138",
 			"key": "hubKey",
 			"value": "Hub_3A17F5AB-A799-4F46-A2F5-6EC927479484"
 		},
 		{
+			"id": "69542088-87fd-44a6-94f6-d7b1fdeb2a53",
 			"key": "avbId",
 			"value": "protest1"
 		},
 		{
+			"id": "102b9656-dcfb-4349-930c-a52e4ac77807",
 			"key": "attributeNameId",
 			"value": "100"
 		},
 		{
+			"id": "76fbf673-9913-4cbf-bc5f-b953881f797c",
 			"key": "apiKey",
 			"value": "WTEC_1e50cf49da20113c69dca5a212a793331b6db78b06686"
 		},
 		{
+			"id": "962a0802-7aa6-4b3c-a330-48c766c5c7cc",
 			"key": "regularPrice",
 			"value": "299.99"
 		},
 		{
+			"id": "1e6fc2b4-77e8-4981-a897-5bbeb373bccf",
 			"key": "specialPrice",
 			"value": "199.99"
 		},
 		{
+			"id": "4dfa25cf-129d-47d1-9a7b-f8d53f5125e0",
 			"key": "uniqId",
 			"value": ""
 		},
 		{
+			"id": "a2923e65-a7c9-4fd4-8224-6ba1ad741284",
 			"key": "attributeNameIdValue",
 			"value": "35"
 		},
 		{
+			"id": "f40a7a2d-13f1-4c73-91ee-ead7b70aad4e",
 			"key": "firstAttributeNameId",
 			"value": ""
 		},
 		{
+			"id": "40c5a397-de40-4206-91eb-ae6c38a1e27a",
 			"key": "found",
 			"value": ""
 		},
 		{
+			"id": "b468c313-b687-403f-af11-7ba1415f0856",
 			"key": "attributeSimpleId",
 			"value": ""
 		},
 		{
+			"id": "91191476-8714-4594-849c-d62d2d0b6ea8",
 			"key": "uniqId ",
 			"value": ""
 		}
