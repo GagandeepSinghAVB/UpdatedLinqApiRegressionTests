@@ -1,0 +1,431 @@
+{
+	"id": "e97b55c8-e928-4b8c-9e3d-49dbcc2bd08c",
+	"name": "LINQ Test1",
+	"values": [
+		{
+			"key": "PMLIB",
+			"value": "(function () {\n\tfunction createPmLib() {\n\t\tvar _pmLib = {};\n\n\t\t_pmLib.checkForBearerToken = function () {\n\t\t\tlet bearer = pm.environment.get(\"bearer\");\n\t\t\tlet needsNewBearerToken = false;\n\n\t\t\tif (!bearer) {\n\t\t\t\tneedsNewBearerToken = true;\n\t\t\t} else {\n\t\t\t\ttry {\n\t\t\t\t\tlet base64Url = bearer.split('.')[1];\n\t\t\t\t\tlet base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');\n\t\t\t\t\tlet jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {\n\t\t\t\t\t\treturn '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);\n\t\t\t\t\t}).join(''));\n\t\t\t\t\tlet jsonData = JSON.parse(jsonPayload);\n\t\t\t\t\tlet bearerTimestamp = parseInt(jsonData.exp);\n\t\t\t\t\tif (bearerTimestamp < 10000000000) {\n\t\t\t\t\t\tbearerTimestamp *= 1000;\n\t\t\t\t\t}\n\t\t\t\t\tlet currentTimestamp = new Date().getTime();\n\t\t\t\t\tif (currentTimestamp > bearerTimestamp) {\n\t\t\t\t\t\tneedsNewBearerToken = true;\n\t\t\t\t\t}\n\t\t\t\t} catch (e) {\n\t\t\t\t\tconsole.error(\"Error decoding token, fetching new one.\");\n\t\t\t\t\tneedsNewBearerToken = true;\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tif (needsNewBearerToken) {\n\t\t\t\tvar endPoint = pm.environment.get(\"authEndPoint\");\n\t\t\t\tvar key = 'AvbUnitTest';\n\t\t\t\tvar secret = 'notSOsecret';\n\t\t\t\tvar cat = key + ':' + secret;\n\t\t\t\tvar credentials = Buffer.from(cat).toString('base64');\n\n\t\t\t\tpm.sendRequest({\n\t\t\t\t\turl: endPoint,\n\t\t\t\t\tmethod: \"POST\",\n\t\t\t\t\theader: {\n\t\t\t\t\t\t\"Authorization\": \"Basic \" + credentials,\n\t\t\t\t\t\t\"Content-Type\": \"application/x-www-form-urlencoded\"\n\t\t\t\t\t},\n\t\t\t\t\tbody: {\n\t\t\t\t\t\tmode: \"urlencoded\",\n\t\t\t\t\t\turlencoded: [\n\t\t\t\t\t\t\t{ key: \"username\", value: \"linqdevs@avb.net\" },\n\t\t\t\t\t\t\t{ key: \"password\", value: \"mtk#Web18\" },\n\t\t\t\t\t\t\t{ key: \"grant_type\", value: \"password\" }\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t}, function (err, res) {\n\t\t\t\t\tif (err || !res) {\n\t\t\t\t\t\tconsole.error(\"Request error or no response:\", err);\n\t\t\t\t\t\treturn;\n\t\t\t\t\t}\n\n\t\t\t\t\tconst rawText = res.text();\n\n\t\t\t\t\tif (!rawText || rawText.trim() === \"\") {\n\t\t\t\t\t\tconsole.error(\"Empty response received from auth endpoint.\");\n\t\t\t\t\t\treturn;\n\t\t\t\t\t}\n\n\t\t\t\t\ttry {\n\t\t\t\t\t\tconst jsonData = res.json();\n\t\t\t\t\t\tconst bearer = jsonData.access_token;\n\t\t\t\t\t\tif (bearer) {\n\t\t\t\t\t\t\tpm.environment.set(\"bearer\", bearer);\n\t\t\t\t\t\t\tconsole.log(\"New bearer token set.\");\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tconsole.error(\"Bearer token not found in response.\");\n\t\t\t\t\t\t}\n\t\t\t\t\t} catch (e) {\n\t\t\t\t\t\tconsole.error(\"Error parsing JSON from auth response:\", e.message);\n\t\t\t\t\t\tconsole.error(\"Raw response:\", rawText);\n\t\t\t\t\t}\n\t\t\t\t});\n\t\t\t}\n\t\t};\n\n\t\t_pmLib.verifyResponseStatus200 = function () {\n\t\t\tpm.test(\"Status code is 200\", function () {\n\t\t\t\tpm.response.to.have.status(200);\n\t\t\t});\n\t\t};\n\n\t\t_pmLib.ensureEnvarExists = function (envarName, defaultValue) {\n\t\t\tif (!pm.environment.has(envarName) || pm.environment.get(envarName) == \"\") {\n\t\t\t\tpm.environment.set(envarName, defaultValue);\n\t\t\t}\n\t\t};\n\n\t\t_pmLib.verifyResponseValidWithBody = function () {\n\t\t\tpm.test(\"Response is valid and has a body\", function () {\n\t\t\t\tpm.response.to.be.ok;\n\t\t\t\tpm.response.to.be.withBody;\n\t\t\t\tpm.response.to.be.json;\n\t\t\t});\n\t\t};\n\n\t\t/*\n\t\t * To add any other functions, follow the pattern above.\n\t\t */\n\t\treturn _pmLib;\n\t}\n\n\tthis.pmLib = createPmLib();\n})();",
+			"enabled": true
+		},
+		{
+			"key": "GetProduct_AttribNameID",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "GetProduct_AttribSchemaID",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "currentDate",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "endPoint",
+			"value": "https://avbapitest1.avbportal.com/",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "posEndPoint",
+			"value": "https://avbapipostest1.avbportal.com/",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "webEndPoint",
+			"value": "https://avbtest1.avbportal.com/",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "authEndPoint",
+			"value": "https://avbauthtest1.avbportal.com/connect/token",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "magentoEndPoint",
+			"value": "https://magentotesting.avbportal.com/",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "publicEndPoint",
+			"value": "https://avbpublicapitest1.avbportal.com",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "hangfireEndPoint",
+			"value": "https://avbhangfiretest1.avbportal.com/",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "bearer",
+			"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImE2OTE0OGI5ODZkNzljOTY3ZjkxZmE3NDA3NDAyMTUxIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3NTUxOTgxMzYsImV4cCI6MTc1NTI0MTMzNiwiaXNzIjoiaHR0cHM6Ly9hdmJhdXRodGVzdDEuYXZicG9ydGFsLmNvbSIsImF1ZCI6WyJhdmJMSU5RQXBpMDAwMSIsImF2YkxJTlFIYW5nZmlyZTAwMDEiLCJBdmJNZW1iZXJzaGlwQXBpMDAwMSJdLCJjbGllbnRfaWQiOiJBdmJVbml0VGVzdCIsInN1YiI6IjU2NDg1MjIwLTM4YjktNDdlNy1iOWJhLWJmZjY2ZjA3MzI4ZCIsImF1dGhfdGltZSI6MTc1NTE5ODEzMywiaWRwIjoibG9jYWwiLCJBY2NvdW50IjpbIjEyODUiLCJBbGwiXSwicm9sZSI6WyJBZG1pbmlzdHJhdG9yIiwiQWxsIEFjY291bnRzIl0sIkNhbiBNYW5hZ2UgVXNlcnMiOiJ0cnVlIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoibGlucWRldnNAYXZiLm5ldCIsIkFzcE5ldC5JZGVudGl0eS5TZWN1cml0eVN0YW1wIjoiVzI3TUs0TENEWlZRWU82UUdVMk1PR0RCQ0JITVNQREEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJsaW5xZGV2c0BhdmIubmV0IiwibmFtZSI6ImxpbnFkZXZzQGF2Yi5uZXQiLCJlbWFpbCI6ImxpbnFkZXZzQGF2Yi5uZXQiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZhbWlseV9uYW1lIjoiS2FiaWwiLCJnaXZlbl9uYW1lIjoiVGFyaWsiLCJpZCI6IjU2NDg1MjIwLTM4YjktNDdlNy1iOWJhLWJmZjY2ZjA3MzI4ZCIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJhdmJMSU5RQXBpMDAwMSIsImF2YkxJTlFIYW5nZmlyZTAwMDEiLCJBdmJNZW1iZXJzaGlwQXBpMDAwMSIsImRhdGFldmVudHJlY29yZHNzY29wZSIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXX0.Lwpmz8fQ_UWBxqhI1QRlONp0k4ArcuRjyoTVpNw_dE2R_Y3QPrVvFmsVk4JkUEdj9xX3OzpWS3R4yG9pn--mwPHWF9jkYQr0NwTkLxQlahDJIGmh5WVnXCDLOwO460Syjnx4iwHS7lEkv9okn-fI2JX8VzO5f3OVBkbRfJlXQRQEbzOEH42g4IeQ4Q4v8JTZE_gsv7M_QfIaDlRTyD5sTbtc6QycxqO4hE0JlI70vyCIDdCtTmYFKVA3fwsNVzFNZUrTuKovjt_pDCu2o9qzxT9PIw2H0oSvgJjqHYe1IgZwpZ4yWtMzQQDAwhJSj3G8y-EgCI3CFm_E5SdyxE7Ekg",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "customSku",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "customProductId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "actualSku",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "customSku2",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "customProductId2",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "defaultSku",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "defaultProductId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "defaultSku_A",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "defaultProductId_A",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "tAudience",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "defaultSku_B",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "defaultProductId_B",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "customSku_A",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "customProductId_A",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "customSku_B",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "customProductId_B",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "customPackageProductId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "firstAttributeNameId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "currentdate",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "lastAttemptCount",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "currentRun",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "customProductApid",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "defPackageProductId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "defPackageApid",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "customPackageApid",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "defaultProductApid",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "customPackageSku",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "brandAliases",
+			"value": "Test Brand",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "addOnGroupName",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "newbrandname",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "dealerAccountId",
+			"value": "1285",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "retryCount",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "defaultAccountId",
+			"value": "0",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "GCCid",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "brandId",
+			"value": "536",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "brandName",
+			"value": "Test Brand Production Testing Only",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "brand_Name",
+			"value": "\"Test Brand Production Testing Only\"",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "categoryId",
+			"value": "71",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "attributeSchemaId",
+			"value": "379",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "langId_en",
+			"value": "en-us",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "langId_fr",
+			"value": "fr-ca",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "hubKey",
+			"value": "Hub_3A17F5AB-A799-4F46-A2F5-6EC927479484",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "avbId",
+			"value": "protest1",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "attributeNameId",
+			"value": "100",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "apiKey",
+			"value": "WTEC_1e50cf49da20113c69dca5a212a793331b6db78b06686",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "regularPrice",
+			"value": "299.99",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "rebateId",
+			"value": "1489",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "specialPrice",
+			"value": "199.99",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "uniqId",
+			"value": "",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "attributeNameIdValue",
+			"value": "35",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "firstAttributeNameId",
+			"value": "",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "found",
+			"value": "",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "attributeSimpleId",
+			"value": "",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "timestamp",
+			"value": "",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "ruleValue",
+			"value": "",
+			"type": "default",
+			"description": "",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2025-09-09T21:14:07.369Z",
+	"_postman_exported_using": "Postman/11.61.8"
+}
