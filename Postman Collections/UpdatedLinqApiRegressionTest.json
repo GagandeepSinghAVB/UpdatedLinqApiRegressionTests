@@ -17747,97 +17747,97 @@
 	],
 	"variable": [
 		{
-			"id": "2dda9611-7b8d-47fe-8852-870e16b4390a",
+			"id": "b678c7be-6251-409f-8987-8676b6d86e7d",
 			"key": "brandId",
 			"value": "536"
 		},
 		{
-			"id": "3a0b8c55-92ce-45f6-a689-99d68d317ccf",
+			"id": "4aea3313-37e5-458b-b1f5-618be39a9032",
 			"key": "brandName",
 			"value": "Test Brand Production Testing Only"
 		},
 		{
-			"id": "e1ca9ec1-4d5a-4c9f-84f1-4fa67240e9f0",
+			"id": "9469a986-2175-4ffe-8678-284a56bc74ca",
 			"key": "brand_Name",
 			"value": "\"Test Brand Production Testing Only\""
 		},
 		{
-			"id": "df1e27e4-131b-4027-a552-376bb42664e1",
+			"id": "e391eafe-f335-4bd8-ae99-b1728c36a891",
 			"key": "categoryId",
 			"value": "71"
 		},
 		{
-			"id": "cbad3507-28e2-430f-a7d5-cc37cd62c7a3",
+			"id": "b828b7f9-b40d-4ee5-987a-c700f03b6a1e",
 			"key": "attributeSchemaId",
 			"value": "379"
 		},
 		{
-			"id": "fb053b01-4d2d-4b0c-81ba-4a90e94b868c",
+			"id": "e8fed8a1-db38-4136-95c2-eab6e2273c38",
 			"key": "langId_en",
 			"value": "en-us"
 		},
 		{
-			"id": "05ca5df0-08ac-4991-911f-90fd2d7c3996",
+			"id": "b80be2ec-d151-4fae-a02d-4f769d996876",
 			"key": "langId_fr",
 			"value": "fr-ca"
 		},
 		{
-			"id": "40df5984-509d-4f19-9335-3adb687c1f57",
+			"id": "0eadc4ae-3234-4609-ac25-8b174428845e",
 			"key": "hubKey",
 			"value": "Hub_3A17F5AB-A799-4F46-A2F5-6EC927479484"
 		},
 		{
-			"id": "b14bbe29-4835-4383-affe-47746250aa4d",
+			"id": "6e77e534-293a-4a9a-89e9-c9eb42e8be5b",
 			"key": "avbId",
 			"value": "protest1"
 		},
 		{
-			"id": "c9e9e5be-ab65-44c4-9bec-c7fa38754722",
+			"id": "36906f22-a732-4c07-bacf-7b626cce5cad",
 			"key": "attributeNameId",
 			"value": "100"
 		},
 		{
-			"id": "b0a89b82-33d6-4e22-b87f-97aefa3cc77d",
+			"id": "07ffc973-9b19-4fa6-ae3b-3a53b840c561",
 			"key": "apiKey",
 			"value": "WTEC_1e50cf49da20113c69dca5a212a793331b6db78b06686"
 		},
 		{
-			"id": "a604ef7e-8745-4720-ac1e-69536f61ebeb",
+			"id": "89880274-32f9-4f04-801d-8fcd6bdc4af6",
 			"key": "regularPrice",
 			"value": "299.99"
 		},
 		{
-			"id": "d2c69370-f524-4b8c-88c6-9d2362e55dd3",
+			"id": "0cd97313-25c1-4e84-9a28-ca17e5a5fafb",
 			"key": "specialPrice",
 			"value": "199.99"
 		},
 		{
-			"id": "2348b424-d4d5-473f-a4aa-f17d814e5ded",
+			"id": "dd15b074-d09f-49fd-8bf5-84cf7db70a9f",
 			"key": "uniqId",
 			"value": ""
 		},
 		{
-			"id": "087c3aa5-3eb9-44ef-964a-711a854453a4",
+			"id": "fc753fd3-98a5-4a21-bbed-162443ddf99b",
 			"key": "attributeNameIdValue",
 			"value": "35"
 		},
 		{
-			"id": "a76cca0e-2591-43f6-86ac-c82eddee6825",
+			"id": "38303636-cc3d-4e69-a9d3-3f0647219fb7",
 			"key": "firstAttributeNameId",
 			"value": ""
 		},
 		{
-			"id": "ea04e26b-0913-497f-b4a1-ace1cdca62ec",
+			"id": "a6e50624-0f50-4864-8328-63d753c13ac4",
 			"key": "found",
 			"value": ""
 		},
 		{
-			"id": "e6672baa-12f4-4602-ba73-066260582145",
+			"id": "a42e5b86-2e3b-4c7b-946f-7d93bc0eea99",
 			"key": "attributeSimpleId",
 			"value": ""
 		},
 		{
-			"id": "1bbd03d3-8452-4ffc-895b-fee2f47ce26d",
+			"id": "77f29159-ed92-43a8-aae1-f4d488c2de77",
 			"key": "uniqId ",
 			"value": ""
 		}
