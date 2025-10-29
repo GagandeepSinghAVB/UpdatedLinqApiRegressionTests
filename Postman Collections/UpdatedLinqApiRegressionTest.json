@@ -17586,7 +17586,7 @@
 									"});\r",
 									"\r",
 									"// Verify message text contains \"Successfully deleted\"\r",
-									"pm.test(\"Message confirms successful deletion\", function () {\r",
+									"pm.test(\"Message confirms successful deleted\", function () {\r",
 									"    pm.expect(response.message).to.include(\"Successfully deleted\");\r",
 									"});\r",
 									"// Parse response JSON\r",
@@ -17746,78 +17746,97 @@
 	],
 	"variable": [
 		{
+			"id": "f80384ef-6943-46ac-a029-3208e8bc0ce4",
 			"key": "brandId",
 			"value": "536"
 		},
 		{
+			"id": "6bb0c578-893c-4d3e-8441-fe82ccde953e",
 			"key": "brandName",
 			"value": "Test Brand Production Testing Only"
 		},
 		{
+			"id": "20956693-1dca-4eda-852e-400e0c19870b",
 			"key": "brand_Name",
 			"value": "\"Test Brand Production Testing Only\""
 		},
 		{
+			"id": "805e8d83-5892-41ab-8786-cc46710c312e",
 			"key": "categoryId",
 			"value": "71"
 		},
 		{
+			"id": "c2c7345a-7615-4603-8a08-cebee8cbfbce",
 			"key": "attributeSchemaId",
 			"value": "379"
 		},
 		{
+			"id": "c3106f27-cf89-4623-9c9f-d8f556e0ba04",
 			"key": "langId_en",
 			"value": "en-us"
 		},
 		{
+			"id": "1f1449b6-ee07-44b0-a39b-d749f0b26997",
 			"key": "langId_fr",
 			"value": "fr-ca"
 		},
 		{
+			"id": "575bae49-55e0-44f5-945d-1e9f645c833c",
 			"key": "hubKey",
 			"value": "Hub_3A17F5AB-A799-4F46-A2F5-6EC927479484"
 		},
 		{
+			"id": "87d5abe5-e2f2-403d-8335-ae0f7724adc1",
 			"key": "avbId",
 			"value": "protest1"
 		},
 		{
+			"id": "8b3197e7-14b7-4a1d-931c-8f9cb18d1da5",
 			"key": "attributeNameId",
 			"value": "100"
 		},
 		{
+			"id": "79997c8f-a61b-4cac-baee-a828dc7fa006",
 			"key": "apiKey",
 			"value": "WTEC_1e50cf49da20113c69dca5a212a793331b6db78b06686"
 		},
 		{
+			"id": "74f85038-7eda-4b67-93ab-a86367f3b3fa",
 			"key": "regularPrice",
 			"value": "299.99"
 		},
 		{
+			"id": "d0c970ea-d049-44c8-b609-e362a4d7066e",
 			"key": "specialPrice",
 			"value": "199.99"
 		},
 		{
+			"id": "f9abcd56-0239-45ed-a671-052b19aad930",
 			"key": "uniqId",
 			"value": ""
 		},
 		{
+			"id": "d9fcfee4-92a9-4172-8da2-fc7aacda7fa3",
 			"key": "attributeNameIdValue",
 			"value": "35"
 		},
 		{
+			"id": "6bf531e4-a18b-4425-a29b-f35e123e674d",
 			"key": "firstAttributeNameId",
 			"value": ""
 		},
 		{
+			"id": "8ff1b0dd-8b6e-4076-b935-e6ff270586c1",
 			"key": "found",
 			"value": ""
 		},
 		{
+			"id": "984718b9-14b0-4e17-92a0-0f47da40087b",
 			"key": "attributeSimpleId",
 			"value": ""
 		},
 		{
+			"id": "a1a04529-0bb1-469f-8477-f4f5ebf4d2d2",
 			"key": "uniqId ",
 			"value": ""
 		}
