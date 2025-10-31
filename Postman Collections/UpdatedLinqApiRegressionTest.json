@@ -4696,8 +4696,7 @@
 									"    expectedDescriptions.forEach(expected => {\r",
 									"        pm.expect(actualDescriptions).to.include(expected);\r",
 									"    });\r",
-									"});\r",
-									""
+									"});"
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -17751,78 +17750,97 @@
 	],
 	"variable": [
 		{
+			"id": "51719444-48f2-4894-bb4a-8ae54fb5ac49",
 			"key": "brandId",
 			"value": "536"
 		},
 		{
+			"id": "adf92679-1213-4565-8933-e10296baf8d5",
 			"key": "brandName",
 			"value": "Test Brand Production Testing Only"
 		},
 		{
+			"id": "91a4ca51-9dc9-4264-b14f-6e2f028faa90",
 			"key": "brand_Name",
 			"value": "\"Test Brand Production Testing Only\""
 		},
 		{
+			"id": "dc8ff92f-14b9-48e2-b8d1-0ab5548fc15a",
 			"key": "categoryId",
 			"value": "71"
 		},
 		{
+			"id": "b6e672b8-c983-4afc-a469-a8963e3892fe",
 			"key": "attributeSchemaId",
 			"value": "379"
 		},
 		{
+			"id": "821a962f-9772-4a20-b4be-e6703efa10d6",
 			"key": "langId_en",
 			"value": "en-us"
 		},
 		{
+			"id": "ca45e72b-cabb-4e89-86f7-0636805e4331",
 			"key": "langId_fr",
 			"value": "fr-ca"
 		},
 		{
+			"id": "8979074a-4f6e-4eda-8554-4d33d412591a",
 			"key": "hubKey",
 			"value": "Hub_3A17F5AB-A799-4F46-A2F5-6EC927479484"
 		},
 		{
+			"id": "22811186-5e14-4ea7-8548-ae8c6e9cc7ad",
 			"key": "avbId",
 			"value": "protest1"
 		},
 		{
+			"id": "5a91bb07-e7d0-4414-8177-b3c72532bfc4",
 			"key": "attributeNameId",
 			"value": "100"
 		},
 		{
+			"id": "5cf21c1d-b6f5-4974-b624-b924a4c98b31",
 			"key": "apiKey",
 			"value": "WTEC_1e50cf49da20113c69dca5a212a793331b6db78b06686"
 		},
 		{
+			"id": "41aecc43-06a2-47c3-b6f6-77cb8a3b1ba0",
 			"key": "regularPrice",
 			"value": "299.99"
 		},
 		{
+			"id": "4fd9b0c5-c204-4ae4-a1dd-c7d39d74d55e",
 			"key": "specialPrice",
 			"value": "199.99"
 		},
 		{
+			"id": "d1dd3382-5e1c-4406-9cb2-e644d40b8d11",
 			"key": "uniqId",
 			"value": ""
 		},
 		{
+			"id": "9410c339-5c39-4399-9f5c-d4dfdfba6986",
 			"key": "attributeNameIdValue",
 			"value": "35"
 		},
 		{
+			"id": "4effcfbc-73d9-4860-9882-45144bf33f05",
 			"key": "firstAttributeNameId",
 			"value": ""
 		},
 		{
+			"id": "0a90c82a-f882-488e-9255-aae6d0bd1895",
 			"key": "found",
 			"value": ""
 		},
 		{
+			"id": "729ab738-0e98-43f1-bf99-51658f7b15b2",
 			"key": "attributeSimpleId",
 			"value": ""
 		},
 		{
+			"id": "209ac20c-a301-464c-a9c8-88d15026ae97",
 			"key": "uniqId ",
 			"value": ""
 		}
