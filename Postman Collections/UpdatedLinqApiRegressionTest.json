@@ -17522,7 +17522,7 @@
 								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImE2OTE0OGI5ODZkNzljOTY3ZjkxZmE3NDA3NDAyMTUxIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3NTMyNzA0NzEsImV4cCI6MTc1MzMxMzY3MSwiaXNzIjoiaHR0cHM6Ly9hdmJhdXRodGVzdDMuYXZicG9ydGFsLmNvbSIsImF1ZCI6ImF2YkxJTlFBcGkwMDAxIiwiY2xpZW50X2lkIjoiYXZiTGlucUFQSTAwMDEiLCJzdWIiOiI0Y2IwYTliYS02YzM0LTRmMjItYTkxZS1jZDFkYjk0OWRjNzkiLCJhdXRoX3RpbWUiOjE3NTMyNzA0NjgsImlkcCI6ImxvY2FsIiwiQWNjb3VudCI6WyIwLDEyODUsMzQyMCIsIkFsbCJdLCJyb2xlIjpbIkFkbWluaXN0cmF0b3IiLCJEZXZlbG9wZXIiLCJBbGwgQWNjb3VudHMiXSwiQ2FuIE1hbmFnZSBVc2VycyI6InRydWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJndWxzaGFuLnVwcmV0aUBhdmIubmV0IiwiQXNwTmV0LklkZW50aXR5LlNlY3VyaXR5U3RhbXAiOiJWUzRJQldCSVQzSFJJMk5IUVZMRks3UVVYR0JPSEZHUCIsIkNhbiBDcmVhdGUgQ3VzdG9tIFBhY2thZ2VzIjoidHJ1ZSIsInByZWZlcnJlZF91c2VybmFtZSI6Imd1bHNoYW4udXByZXRpQGF2Yi5uZXQiLCJuYW1lIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmFtaWx5X25hbWUiOiJVcHJldGkiLCJnaXZlbl9uYW1lIjoiR3Vsc2hhbiIsImlkIjoiNGNiMGE5YmEtNmMzNC00ZjIyLWE5MWUtY2QxZGI5NDlkYzc5Iiwic2NvcGUiOlsiYXZiTElOUUFwaTAwMDEiXSwiYW1yIjpbInB3ZCJdfQ.NetF_1fYlKDErLBJ4GHMpHehI0w69pfrV-bfvot9NNaqo-GVBuSMwEy2Fo-SvgiXDbXuUjnugwwfM5mQDIFJbvK1H-V1tNmrKLFBZWPzqEuilzlGDIyY0yXDiQ3OnjjmgMb6FzpaPpnLzrKF3DLuvj0efVA44joRjVsmuFXyEtKb31C187MNNMNWt7Aw6hss6RacDLF_-GFL0F5SO0k1DPC5TPcMnqIJUnNv9gF7fQVMKL63e7SwCVErGjmDZEE9I6Z35e-ZDSuDxh-2CquCd8mTvhOx9RqfOdKuCnpzmy4BGRPfb4zoEb1ABT6EkXrnveHJeysOyzpaypEJDw8eRA"
 							}
 						],
-						"url": "{{endPoint}}api/account/{{dealerAccountId}}/contentsnippets/160/promote"
+						"url": "{{endPoint}}api/account/{{dealerAccountId}}/contentsnippets/{{contentSnippets}}/promote"
 					},
 					"response": []
 				},
@@ -18029,78 +18029,97 @@
 	],
 	"variable": [
 		{
+			"id": "459f6eec-efa3-4115-a655-378e72cd6a97",
 			"key": "brandId",
 			"value": "536"
 		},
 		{
+			"id": "3b06ee91-98ce-4d17-92e8-0a04daab9826",
 			"key": "brandName",
 			"value": "Test Brand Production Testing Only"
 		},
 		{
+			"id": "80dc84c4-84b1-408b-9c44-349aaaaf5a7b",
 			"key": "brand_Name",
 			"value": "\"Test Brand Production Testing Only\""
 		},
 		{
+			"id": "4fc72139-d75d-41ea-8003-d8e8d391221d",
 			"key": "categoryId",
 			"value": "71"
 		},
 		{
+			"id": "81226eb7-a897-44d6-ae7c-422aca68ede0",
 			"key": "attributeSchemaId",
 			"value": "379"
 		},
 		{
+			"id": "1e5efd90-787e-4f38-9fb1-9a5fdf7ea605",
 			"key": "langId_en",
 			"value": "en-us"
 		},
 		{
+			"id": "916b63ec-881d-4d07-9bde-16bd819b1469",
 			"key": "langId_fr",
 			"value": "fr-ca"
 		},
 		{
+			"id": "d53ccc19-5b96-485d-b24c-3b6174a89325",
 			"key": "hubKey",
 			"value": "Hub_3A17F5AB-A799-4F46-A2F5-6EC927479484"
 		},
 		{
+			"id": "95a4498e-9cc9-4b79-aac5-286e722bc463",
 			"key": "avbId",
 			"value": "protest1"
 		},
 		{
+			"id": "37fc0549-9e69-4928-bfa5-2e529a6cf058",
 			"key": "attributeNameId",
 			"value": "100"
 		},
 		{
+			"id": "1704fcbe-0896-403a-b138-12e4add72ce1",
 			"key": "apiKey",
 			"value": "WTEC_1e50cf49da20113c69dca5a212a793331b6db78b06686"
 		},
 		{
+			"id": "334be042-a089-41b5-b120-23f94d25a270",
 			"key": "regularPrice",
 			"value": "299.99"
 		},
 		{
+			"id": "db9ab47b-4c14-4c1e-b93b-cfd74d81680c",
 			"key": "specialPrice",
 			"value": "199.99"
 		},
 		{
+			"id": "6264698d-af0e-4967-934f-db37b14a0a83",
 			"key": "uniqId",
 			"value": ""
 		},
 		{
+			"id": "28fbc5f2-1926-4ac2-b7f6-01f68255b863",
 			"key": "attributeNameIdValue",
 			"value": "35"
 		},
 		{
+			"id": "7647df89-9731-4d36-82f2-e4c8368ff503",
 			"key": "firstAttributeNameId",
 			"value": ""
 		},
 		{
+			"id": "566ad5e1-a756-42fa-a2ce-8d801ce6977a",
 			"key": "found",
 			"value": ""
 		},
 		{
+			"id": "d44ca8b1-6f1f-47ff-b2b5-b8c2064ff478",
 			"key": "attributeSimpleId",
 			"value": ""
 		},
 		{
+			"id": "65a6836e-01cb-4315-9743-4ed20c3562c2",
 			"key": "uniqId ",
 			"value": ""
 		}
