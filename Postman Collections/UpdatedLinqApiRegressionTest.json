@@ -183,7 +183,7 @@
 									"}\r",
 									"\r",
 									"\r",
-									"/* Ignore - Testing the integration */"
+									"/* Ignore - Testing the integration Test 2 */"
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -17754,78 +17754,97 @@
 	],
 	"variable": [
 		{
+			"id": "3467aec0-1e2c-4924-a14b-509a8ac876ee",
 			"key": "brandId",
 			"value": "536"
 		},
 		{
+			"id": "834b3536-b0ee-4e04-a801-6c2fa4163144",
 			"key": "brandName",
 			"value": "Test Brand Production Testing Only"
 		},
 		{
+			"id": "6d329680-ba16-45fa-a2f0-70597da40d66",
 			"key": "brand_Name",
 			"value": "\"Test Brand Production Testing Only\""
 		},
 		{
+			"id": "7ddbae4c-110a-4c2b-95f2-39a280d1bf5f",
 			"key": "categoryId",
 			"value": "71"
 		},
 		{
+			"id": "0c569830-74de-4343-8464-3bbe56c771f2",
 			"key": "attributeSchemaId",
 			"value": "379"
 		},
 		{
+			"id": "b15e1144-abae-4387-a765-ffb9bdb8697e",
 			"key": "langId_en",
 			"value": "en-us"
 		},
 		{
+			"id": "abb2a055-58f3-46e9-94bd-71ce81d0d62e",
 			"key": "langId_fr",
 			"value": "fr-ca"
 		},
 		{
+			"id": "a96f9253-9d2d-4c41-8298-80876106b941",
 			"key": "hubKey",
 			"value": "Hub_3A17F5AB-A799-4F46-A2F5-6EC927479484"
 		},
 		{
+			"id": "c7578d0b-1f58-441f-a581-ec999d1877be",
 			"key": "avbId",
 			"value": "protest1"
 		},
 		{
+			"id": "ceb86873-a466-480d-bc65-27a5ccab2249",
 			"key": "attributeNameId",
 			"value": "100"
 		},
 		{
+			"id": "e0fbc5e6-9395-426d-babe-9776a0d57565",
 			"key": "apiKey",
 			"value": "WTEC_1e50cf49da20113c69dca5a212a793331b6db78b06686"
 		},
 		{
+			"id": "2e756d1c-b7ac-4163-9cbc-0ff87da1b537",
 			"key": "regularPrice",
 			"value": "299.99"
 		},
 		{
+			"id": "b05913e0-c829-47a0-aa0e-fd5131fa55fe",
 			"key": "specialPrice",
 			"value": "199.99"
 		},
 		{
+			"id": "de2e02b2-a0c7-49de-a26a-2a3b78dacdc7",
 			"key": "uniqId",
 			"value": ""
 		},
 		{
+			"id": "7c0b0e5b-e280-4588-a368-d3d681f84b21",
 			"key": "attributeNameIdValue",
 			"value": "35"
 		},
 		{
+			"id": "67f02afe-7169-48e8-ab0a-18c2a9af9f53",
 			"key": "firstAttributeNameId",
 			"value": ""
 		},
 		{
+			"id": "3e2b33a5-e3fb-4000-8b60-2cbef702718d",
 			"key": "found",
 			"value": ""
 		},
 		{
+			"id": "5afbff60-9312-4177-abc7-f879932b0575",
 			"key": "attributeSimpleId",
 			"value": ""
 		},
 		{
+			"id": "ef825b33-9f19-415d-bb72-bbc220ea34a3",
 			"key": "uniqId ",
 			"value": ""
 		}
