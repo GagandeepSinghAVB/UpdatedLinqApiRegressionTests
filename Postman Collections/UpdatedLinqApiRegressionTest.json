@@ -18000,97 +18000,78 @@
 	],
 	"variable": [
 		{
-			"id": "d375a80e-9794-4ac4-8168-e5a773ae28e8",
 			"key": "brandId",
 			"value": "536"
 		},
 		{
-			"id": "90bcb264-a3b1-423e-82a5-c4d5605a8560",
 			"key": "brandName",
 			"value": "Test Brand Production Testing Only"
 		},
 		{
-			"id": "df0e920c-eb6a-40c6-91cd-54f3b3211bad",
 			"key": "brand_Name",
 			"value": "\"Test Brand Production Testing Only\""
 		},
 		{
-			"id": "7241c899-9f4f-473d-99d6-7d40cdd663f2",
 			"key": "categoryId",
 			"value": "71"
 		},
 		{
-			"id": "a07b0099-0dbd-4634-954f-cd189ea4366c",
 			"key": "attributeSchemaId",
 			"value": "379"
 		},
 		{
-			"id": "c7485b93-d6df-4cc8-bf68-c6a50a3a44a4",
 			"key": "langId_en",
 			"value": "en-us"
 		},
 		{
-			"id": "0f463d7f-e23e-4269-8a1d-f734daddb63b",
 			"key": "langId_fr",
 			"value": "fr-ca"
 		},
 		{
-			"id": "8ae0bf19-f9c4-49de-b4ef-15270a7523c7",
 			"key": "hubKey",
 			"value": "Hub_3A17F5AB-A799-4F46-A2F5-6EC927479484"
 		},
 		{
-			"id": "0dccb209-f9f4-4609-9d32-2bb78237a201",
 			"key": "avbId",
 			"value": "protest1"
 		},
 		{
-			"id": "65aa86de-2282-4d8c-8065-087ff0a8342a",
 			"key": "attributeNameId",
 			"value": "100"
 		},
 		{
-			"id": "6740d300-d44b-4ab8-a67a-5b86b8430b3f",
 			"key": "apiKey",
 			"value": "WTEC_1e50cf49da20113c69dca5a212a793331b6db78b06686"
 		},
 		{
-			"id": "d957f8fb-007d-4256-a66b-ce8b1a242f9d",
 			"key": "regularPrice",
 			"value": "299.99"
 		},
 		{
-			"id": "3e56a2ba-a3bd-49d1-ae04-fa04b8892363",
 			"key": "specialPrice",
 			"value": "199.99"
 		},
 		{
-			"id": "508f8266-a094-4e2b-a674-dafbe913a0c7",
 			"key": "uniqId",
 			"value": ""
 		},
 		{
-			"id": "e678076b-329c-4a93-8899-3db9bee18a77",
 			"key": "attributeNameIdValue",
 			"value": "35"
 		},
 		{
-			"id": "0e930836-c214-4f9f-ae25-7cfe31ee99df",
 			"key": "firstAttributeNameId",
 			"value": ""
 		},
 		{
-			"id": "9ecdb87c-b17a-4d8e-bf6a-286792310180",
 			"key": "found",
 			"value": ""
 		},
 		{
-			"id": "a3917a42-edca-48f7-8977-a386393f72c9",
 			"key": "attributeSimpleId",
 			"value": ""
 		},
 		{
-			"id": "af56cdda-5942-4438-9bfe-03313bcdb3eb",
 			"key": "uniqId ",
 			"value": ""
 		}
