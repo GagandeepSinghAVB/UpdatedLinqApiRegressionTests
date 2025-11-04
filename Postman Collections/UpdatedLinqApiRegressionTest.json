@@ -17316,6 +17316,250 @@
 			"id": "c3532615-af0a-409c-8530-187c91c0dade"
 		},
 		{
+			"name": "Content Management",
+			"item": [
+				{
+					"name": "Create Content Management Snippet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cb3a4921-1ba2-4b00-9b5b-cce99327cd5f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "d9b40bfc-4cbc-44d0-8d4f-87bd9702e5cb",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "bddb3f35-f9b3-477c-9a11-5cb0043f8217",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImE2OTE0OGI5ODZkNzljOTY3ZjkxZmE3NDA3NDAyMTUxIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3NTMxNzY0MDksImV4cCI6MTc1MzIxOTYwOSwiaXNzIjoiaHR0cHM6Ly9hdmJhdXRodGVzdDMuYXZicG9ydGFsLmNvbSIsImF1ZCI6ImF2YkxJTlFBcGkwMDAxIiwiY2xpZW50X2lkIjoiYXZiTGlucUFQSTAwMDEiLCJzdWIiOiI0Y2IwYTliYS02YzM0LTRmMjItYTkxZS1jZDFkYjk0OWRjNzkiLCJhdXRoX3RpbWUiOjE3NTMxNzY0MDYsImlkcCI6ImxvY2FsIiwiQWNjb3VudCI6WyIwLDEyODUsMzQyMCIsIkFsbCJdLCJyb2xlIjpbIkFkbWluaXN0cmF0b3IiLCJEZXZlbG9wZXIiLCJBbGwgQWNjb3VudHMiXSwiQ2FuIE1hbmFnZSBVc2VycyI6InRydWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJndWxzaGFuLnVwcmV0aUBhdmIubmV0IiwiQXNwTmV0LklkZW50aXR5LlNlY3VyaXR5U3RhbXAiOiJWUzRJQldCSVQzSFJJMk5IUVZMRks3UVVYR0JPSEZHUCIsIkNhbiBDcmVhdGUgQ3VzdG9tIFBhY2thZ2VzIjoidHJ1ZSIsInByZWZlcnJlZF91c2VybmFtZSI6Imd1bHNoYW4udXByZXRpQGF2Yi5uZXQiLCJuYW1lIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmFtaWx5X25hbWUiOiJVcHJldGkiLCJnaXZlbl9uYW1lIjoiR3Vsc2hhbiIsImlkIjoiNGNiMGE5YmEtNmMzNC00ZjIyLWE5MWUtY2QxZGI5NDlkYzc5Iiwic2NvcGUiOlsiYXZiTElOUUFwaTAwMDEiXSwiYW1yIjpbInB3ZCJdfQ.igH2qqMpB-DsAqmnppstIMwFYa0fuy1rzlU3irYgvvbniTu-TviCkmytmvTSAKQuK2Ki9pUQtHJBhKVSTLSvDAQWQyyuogZ3qKkE1bGk1QDj73qTGDcLdkzmZTGNn1Jut8osoIp4t53wnkCW4b83BcgobqB8mnupv6FPulRiy2PNewgRSPhduOu6DDBpW2yZdV1Fa6-TVnDQsMc1z9n67twLdKZpdjcQLYn-TLk8CdphRAujeZTVjbmzvAT-D0g9z_FuIQISbEofWjUjN-jKcKPuJHCdkMiqkIet2EnH-6Q2-0OGVgHcMIoDsIDMe22m4VZcEclpk1DSnVrL8lge2w"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Z index Expression background with JS\",\n  \"description\": \"Another Test description for Snippet\",\n  \"languageId\": 1,\n  \"status\": 1,\n  \"contentSnippet\":{\n  \"ContentHtml\": \"<html><body><div><img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABkAGQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDi6KKK+ZP3EKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Z' alt='Red Square'></div></body></html>\"\n  },\n  \"width\": 300,\n  \"height\": 300,\n  \"maxWidth\": 400,\n  \"maxHeight\": 400\n}\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://avbapiqa.avbportal.com/api/account/1285/contentsnippets"
+					},
+					"response": []
+				},
+				{
+					"name": "Get the Content Snippet By ID",
+					"id": "622679e7-e848-4cd2-94fc-c5ac09f43090",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImE2OTE0OGI5ODZkNzljOTY3ZjkxZmE3NDA3NDAyMTUxIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3NTMyNzA0NzEsImV4cCI6MTc1MzMxMzY3MSwiaXNzIjoiaHR0cHM6Ly9hdmJhdXRodGVzdDMuYXZicG9ydGFsLmNvbSIsImF1ZCI6ImF2YkxJTlFBcGkwMDAxIiwiY2xpZW50X2lkIjoiYXZiTGlucUFQSTAwMDEiLCJzdWIiOiI0Y2IwYTliYS02YzM0LTRmMjItYTkxZS1jZDFkYjk0OWRjNzkiLCJhdXRoX3RpbWUiOjE3NTMyNzA0NjgsImlkcCI6ImxvY2FsIiwiQWNjb3VudCI6WyIwLDEyODUsMzQyMCIsIkFsbCJdLCJyb2xlIjpbIkFkbWluaXN0cmF0b3IiLCJEZXZlbG9wZXIiLCJBbGwgQWNjb3VudHMiXSwiQ2FuIE1hbmFnZSBVc2VycyI6InRydWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJndWxzaGFuLnVwcmV0aUBhdmIubmV0IiwiQXNwTmV0LklkZW50aXR5LlNlY3VyaXR5U3RhbXAiOiJWUzRJQldCSVQzSFJJMk5IUVZMRks3UVVYR0JPSEZHUCIsIkNhbiBDcmVhdGUgQ3VzdG9tIFBhY2thZ2VzIjoidHJ1ZSIsInByZWZlcnJlZF91c2VybmFtZSI6Imd1bHNoYW4udXByZXRpQGF2Yi5uZXQiLCJuYW1lIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmFtaWx5X25hbWUiOiJVcHJldGkiLCJnaXZlbl9uYW1lIjoiR3Vsc2hhbiIsImlkIjoiNGNiMGE5YmEtNmMzNC00ZjIyLWE5MWUtY2QxZGI5NDlkYzc5Iiwic2NvcGUiOlsiYXZiTElOUUFwaTAwMDEiXSwiYW1yIjpbInB3ZCJdfQ.NetF_1fYlKDErLBJ4GHMpHehI0w69pfrV-bfvot9NNaqo-GVBuSMwEy2Fo-SvgiXDbXuUjnugwwfM5mQDIFJbvK1H-V1tNmrKLFBZWPzqEuilzlGDIyY0yXDiQ3OnjjmgMb6FzpaPpnLzrKF3DLuvj0efVA44joRjVsmuFXyEtKb31C187MNNMNWt7Aw6hss6RacDLF_-GFL0F5SO0k1DPC5TPcMnqIJUnNv9gF7fQVMKL63e7SwCVErGjmDZEE9I6Z35e-ZDSuDxh-2CquCd8mTvhOx9RqfOdKuCnpzmy4BGRPfb4zoEb1ABT6EkXrnveHJeysOyzpaypEJDw8eRA"
+							}
+						],
+						"url": "{{endpoint}}api/account/{{DealerAccountID}}/contentsnippets/{{contentSnippets}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Get the Content Snippets for an Account",
+					"id": "d4ad89ab-45a6-40e0-8ac5-3d8ce59190f1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImE2OTE0OGI5ODZkNzljOTY3ZjkxZmE3NDA3NDAyMTUxIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3NTMyNzA0NzEsImV4cCI6MTc1MzMxMzY3MSwiaXNzIjoiaHR0cHM6Ly9hdmJhdXRodGVzdDMuYXZicG9ydGFsLmNvbSIsImF1ZCI6ImF2YkxJTlFBcGkwMDAxIiwiY2xpZW50X2lkIjoiYXZiTGlucUFQSTAwMDEiLCJzdWIiOiI0Y2IwYTliYS02YzM0LTRmMjItYTkxZS1jZDFkYjk0OWRjNzkiLCJhdXRoX3RpbWUiOjE3NTMyNzA0NjgsImlkcCI6ImxvY2FsIiwiQWNjb3VudCI6WyIwLDEyODUsMzQyMCIsIkFsbCJdLCJyb2xlIjpbIkFkbWluaXN0cmF0b3IiLCJEZXZlbG9wZXIiLCJBbGwgQWNjb3VudHMiXSwiQ2FuIE1hbmFnZSBVc2VycyI6InRydWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJndWxzaGFuLnVwcmV0aUBhdmIubmV0IiwiQXNwTmV0LklkZW50aXR5LlNlY3VyaXR5U3RhbXAiOiJWUzRJQldCSVQzSFJJMk5IUVZMRks3UVVYR0JPSEZHUCIsIkNhbiBDcmVhdGUgQ3VzdG9tIFBhY2thZ2VzIjoidHJ1ZSIsInByZWZlcnJlZF91c2VybmFtZSI6Imd1bHNoYW4udXByZXRpQGF2Yi5uZXQiLCJuYW1lIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmFtaWx5X25hbWUiOiJVcHJldGkiLCJnaXZlbl9uYW1lIjoiR3Vsc2hhbiIsImlkIjoiNGNiMGE5YmEtNmMzNC00ZjIyLWE5MWUtY2QxZGI5NDlkYzc5Iiwic2NvcGUiOlsiYXZiTElOUUFwaTAwMDEiXSwiYW1yIjpbInB3ZCJdfQ.NetF_1fYlKDErLBJ4GHMpHehI0w69pfrV-bfvot9NNaqo-GVBuSMwEy2Fo-SvgiXDbXuUjnugwwfM5mQDIFJbvK1H-V1tNmrKLFBZWPzqEuilzlGDIyY0yXDiQ3OnjjmgMb6FzpaPpnLzrKF3DLuvj0efVA44joRjVsmuFXyEtKb31C187MNNMNWt7Aw6hss6RacDLF_-GFL0F5SO0k1DPC5TPcMnqIJUnNv9gF7fQVMKL63e7SwCVErGjmDZEE9I6Z35e-ZDSuDxh-2CquCd8mTvhOx9RqfOdKuCnpzmy4BGRPfb4zoEb1ABT6EkXrnveHJeysOyzpaypEJDw8eRA"
+							}
+						],
+						"url": "{{endpoint}}api/account/{{DealerAccountID}}/contentsnippets"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Content Snippet by ID ",
+					"id": "639a7037-79c9-4a9f-b2a6-5c04ad8024f8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImE2OTE0OGI5ODZkNzljOTY3ZjkxZmE3NDA3NDAyMTUxIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3NTMyNzA0NzEsImV4cCI6MTc1MzMxMzY3MSwiaXNzIjoiaHR0cHM6Ly9hdmJhdXRodGVzdDMuYXZicG9ydGFsLmNvbSIsImF1ZCI6ImF2YkxJTlFBcGkwMDAxIiwiY2xpZW50X2lkIjoiYXZiTGlucUFQSTAwMDEiLCJzdWIiOiI0Y2IwYTliYS02YzM0LTRmMjItYTkxZS1jZDFkYjk0OWRjNzkiLCJhdXRoX3RpbWUiOjE3NTMyNzA0NjgsImlkcCI6ImxvY2FsIiwiQWNjb3VudCI6WyIwLDEyODUsMzQyMCIsIkFsbCJdLCJyb2xlIjpbIkFkbWluaXN0cmF0b3IiLCJEZXZlbG9wZXIiLCJBbGwgQWNjb3VudHMiXSwiQ2FuIE1hbmFnZSBVc2VycyI6InRydWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJndWxzaGFuLnVwcmV0aUBhdmIubmV0IiwiQXNwTmV0LklkZW50aXR5LlNlY3VyaXR5U3RhbXAiOiJWUzRJQldCSVQzSFJJMk5IUVZMRks3UVVYR0JPSEZHUCIsIkNhbiBDcmVhdGUgQ3VzdG9tIFBhY2thZ2VzIjoidHJ1ZSIsInByZWZlcnJlZF91c2VybmFtZSI6Imd1bHNoYW4udXByZXRpQGF2Yi5uZXQiLCJuYW1lIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmFtaWx5X25hbWUiOiJVcHJldGkiLCJnaXZlbl9uYW1lIjoiR3Vsc2hhbiIsImlkIjoiNGNiMGE5YmEtNmMzNC00ZjIyLWE5MWUtY2QxZGI5NDlkYzc5Iiwic2NvcGUiOlsiYXZiTElOUUFwaTAwMDEiXSwiYW1yIjpbInB3ZCJdfQ.NetF_1fYlKDErLBJ4GHMpHehI0w69pfrV-bfvot9NNaqo-GVBuSMwEy2Fo-SvgiXDbXuUjnugwwfM5mQDIFJbvK1H-V1tNmrKLFBZWPzqEuilzlGDIyY0yXDiQ3OnjjmgMb6FzpaPpnLzrKF3DLuvj0efVA44joRjVsmuFXyEtKb31C187MNNMNWt7Aw6hss6RacDLF_-GFL0F5SO0k1DPC5TPcMnqIJUnNv9gF7fQVMKL63e7SwCVErGjmDZEE9I6Z35e-ZDSuDxh-2CquCd8mTvhOx9RqfOdKuCnpzmy4BGRPfb4zoEb1ABT6EkXrnveHJeysOyzpaypEJDw8eRA"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"New Test Snippet 23rd July 2025\",\n  \"description\": \"Another Test description for Snippet\",\n  \"languageId\": 1,\n  \"status\": 1,\n  \"contentSnippet\": {\n    \"contentHtml\": \"Another test content for snippet\"\n  },\n  \"width\": -400,\n  \"height\": -400,\n  \"maxWidth\": 500,\n  \"maxHeight\": 500\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{endpoint}}api/account/{{DealerAccountID}}/contentsnippets/169"
+					},
+					"response": []
+				},
+				{
+					"name": "Promotes the draft ContentSnippetFileStorage to published",
+					"id": "86914ac2-fd14-4a3e-8a2b-7132d7451fbc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Bearer}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImE2OTE0OGI5ODZkNzljOTY3ZjkxZmE3NDA3NDAyMTUxIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3NTMyNzA0NzEsImV4cCI6MTc1MzMxMzY3MSwiaXNzIjoiaHR0cHM6Ly9hdmJhdXRodGVzdDMuYXZicG9ydGFsLmNvbSIsImF1ZCI6ImF2YkxJTlFBcGkwMDAxIiwiY2xpZW50X2lkIjoiYXZiTGlucUFQSTAwMDEiLCJzdWIiOiI0Y2IwYTliYS02YzM0LTRmMjItYTkxZS1jZDFkYjk0OWRjNzkiLCJhdXRoX3RpbWUiOjE3NTMyNzA0NjgsImlkcCI6ImxvY2FsIiwiQWNjb3VudCI6WyIwLDEyODUsMzQyMCIsIkFsbCJdLCJyb2xlIjpbIkFkbWluaXN0cmF0b3IiLCJEZXZlbG9wZXIiLCJBbGwgQWNjb3VudHMiXSwiQ2FuIE1hbmFnZSBVc2VycyI6InRydWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJndWxzaGFuLnVwcmV0aUBhdmIubmV0IiwiQXNwTmV0LklkZW50aXR5LlNlY3VyaXR5U3RhbXAiOiJWUzRJQldCSVQzSFJJMk5IUVZMRks3UVVYR0JPSEZHUCIsIkNhbiBDcmVhdGUgQ3VzdG9tIFBhY2thZ2VzIjoidHJ1ZSIsInByZWZlcnJlZF91c2VybmFtZSI6Imd1bHNoYW4udXByZXRpQGF2Yi5uZXQiLCJuYW1lIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmFtaWx5X25hbWUiOiJVcHJldGkiLCJnaXZlbl9uYW1lIjoiR3Vsc2hhbiIsImlkIjoiNGNiMGE5YmEtNmMzNC00ZjIyLWE5MWUtY2QxZGI5NDlkYzc5Iiwic2NvcGUiOlsiYXZiTElOUUFwaTAwMDEiXSwiYW1yIjpbInB3ZCJdfQ.NetF_1fYlKDErLBJ4GHMpHehI0w69pfrV-bfvot9NNaqo-GVBuSMwEy2Fo-SvgiXDbXuUjnugwwfM5mQDIFJbvK1H-V1tNmrKLFBZWPzqEuilzlGDIyY0yXDiQ3OnjjmgMb6FzpaPpnLzrKF3DLuvj0efVA44joRjVsmuFXyEtKb31C187MNNMNWt7Aw6hss6RacDLF_-GFL0F5SO0k1DPC5TPcMnqIJUnNv9gF7fQVMKL63e7SwCVErGjmDZEE9I6Z35e-ZDSuDxh-2CquCd8mTvhOx9RqfOdKuCnpzmy4BGRPfb4zoEb1ABT6EkXrnveHJeysOyzpaypEJDw8eRA"
+							}
+						],
+						"url": "{{endpoint}}api/account/{{DealerAccountID}}/contentsnippets/160/promote"
+					},
+					"response": []
+				},
+				{
+					"name": "Soft Deletes a Content Snippet by its ID for all Accounts.",
+					"id": "f3c3415c-a4c8-4a91-b85a-279954928540",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Bearer}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{endpoint}}api/account/{{DealerAccountID}}/contentsnippets/163"
+					},
+					"response": []
+				},
+				{
+					"name": "Undeletes a previously Soft Deleted Content Snippet by ID",
+					"id": "5a720e00-31ee-48a8-8b4d-1bafad227122",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImE2OTE0OGI5ODZkNzljOTY3ZjkxZmE3NDA3NDAyMTUxIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3NTMyNzA0NzEsImV4cCI6MTc1MzMxMzY3MSwiaXNzIjoiaHR0cHM6Ly9hdmJhdXRodGVzdDMuYXZicG9ydGFsLmNvbSIsImF1ZCI6ImF2YkxJTlFBcGkwMDAxIiwiY2xpZW50X2lkIjoiYXZiTGlucUFQSTAwMDEiLCJzdWIiOiI0Y2IwYTliYS02YzM0LTRmMjItYTkxZS1jZDFkYjk0OWRjNzkiLCJhdXRoX3RpbWUiOjE3NTMyNzA0NjgsImlkcCI6ImxvY2FsIiwiQWNjb3VudCI6WyIwLDEyODUsMzQyMCIsIkFsbCJdLCJyb2xlIjpbIkFkbWluaXN0cmF0b3IiLCJEZXZlbG9wZXIiLCJBbGwgQWNjb3VudHMiXSwiQ2FuIE1hbmFnZSBVc2VycyI6InRydWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJndWxzaGFuLnVwcmV0aUBhdmIubmV0IiwiQXNwTmV0LklkZW50aXR5LlNlY3VyaXR5U3RhbXAiOiJWUzRJQldCSVQzSFJJMk5IUVZMRks3UVVYR0JPSEZHUCIsIkNhbiBDcmVhdGUgQ3VzdG9tIFBhY2thZ2VzIjoidHJ1ZSIsInByZWZlcnJlZF91c2VybmFtZSI6Imd1bHNoYW4udXByZXRpQGF2Yi5uZXQiLCJuYW1lIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmFtaWx5X25hbWUiOiJVcHJldGkiLCJnaXZlbl9uYW1lIjoiR3Vsc2hhbiIsImlkIjoiNGNiMGE5YmEtNmMzNC00ZjIyLWE5MWUtY2QxZGI5NDlkYzc5Iiwic2NvcGUiOlsiYXZiTElOUUFwaTAwMDEiXSwiYW1yIjpbInB3ZCJdfQ.NetF_1fYlKDErLBJ4GHMpHehI0w69pfrV-bfvot9NNaqo-GVBuSMwEy2Fo-SvgiXDbXuUjnugwwfM5mQDIFJbvK1H-V1tNmrKLFBZWPzqEuilzlGDIyY0yXDiQ3OnjjmgMb6FzpaPpnLzrKF3DLuvj0efVA44joRjVsmuFXyEtKb31C187MNNMNWt7Aw6hss6RacDLF_-GFL0F5SO0k1DPC5TPcMnqIJUnNv9gF7fQVMKL63e7SwCVErGjmDZEE9I6Z35e-ZDSuDxh-2CquCd8mTvhOx9RqfOdKuCnpzmy4BGRPfb4zoEb1ABT6EkXrnveHJeysOyzpaypEJDw8eRA"
+							}
+						],
+						"url": "{{endpoint}}api/account/{{DealerAccountID}}/contentsnippets/160/undelete"
+					},
+					"response": []
+				},
+				{
+					"name": "Hard Deletes a Content Snippet by ID for all Accounts",
+					"id": "fd0c33b0-f73a-49a0-9de6-8a554cb6e0c3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImE2OTE0OGI5ODZkNzljOTY3ZjkxZmE3NDA3NDAyMTUxIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3NTMyNzA0NzEsImV4cCI6MTc1MzMxMzY3MSwiaXNzIjoiaHR0cHM6Ly9hdmJhdXRodGVzdDMuYXZicG9ydGFsLmNvbSIsImF1ZCI6ImF2YkxJTlFBcGkwMDAxIiwiY2xpZW50X2lkIjoiYXZiTGlucUFQSTAwMDEiLCJzdWIiOiI0Y2IwYTliYS02YzM0LTRmMjItYTkxZS1jZDFkYjk0OWRjNzkiLCJhdXRoX3RpbWUiOjE3NTMyNzA0NjgsImlkcCI6ImxvY2FsIiwiQWNjb3VudCI6WyIwLDEyODUsMzQyMCIsIkFsbCJdLCJyb2xlIjpbIkFkbWluaXN0cmF0b3IiLCJEZXZlbG9wZXIiLCJBbGwgQWNjb3VudHMiXSwiQ2FuIE1hbmFnZSBVc2VycyI6InRydWUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJndWxzaGFuLnVwcmV0aUBhdmIubmV0IiwiQXNwTmV0LklkZW50aXR5LlNlY3VyaXR5U3RhbXAiOiJWUzRJQldCSVQzSFJJMk5IUVZMRks3UVVYR0JPSEZHUCIsIkNhbiBDcmVhdGUgQ3VzdG9tIFBhY2thZ2VzIjoidHJ1ZSIsInByZWZlcnJlZF91c2VybmFtZSI6Imd1bHNoYW4udXByZXRpQGF2Yi5uZXQiLCJuYW1lIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsIjoiZ3Vsc2hhbi51cHJldGlAYXZiLm5ldCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmFtaWx5X25hbWUiOiJVcHJldGkiLCJnaXZlbl9uYW1lIjoiR3Vsc2hhbiIsImlkIjoiNGNiMGE5YmEtNmMzNC00ZjIyLWE5MWUtY2QxZGI5NDlkYzc5Iiwic2NvcGUiOlsiYXZiTElOUUFwaTAwMDEiXSwiYW1yIjpbInB3ZCJdfQ.NetF_1fYlKDErLBJ4GHMpHehI0w69pfrV-bfvot9NNaqo-GVBuSMwEy2Fo-SvgiXDbXuUjnugwwfM5mQDIFJbvK1H-V1tNmrKLFBZWPzqEuilzlGDIyY0yXDiQ3OnjjmgMb6FzpaPpnLzrKF3DLuvj0efVA44joRjVsmuFXyEtKb31C187MNNMNWt7Aw6hss6RacDLF_-GFL0F5SO0k1DPC5TPcMnqIJUnNv9gF7fQVMKL63e7SwCVErGjmDZEE9I6Z35e-ZDSuDxh-2CquCd8mTvhOx9RqfOdKuCnpzmy4BGRPfb4zoEb1ABT6EkXrnveHJeysOyzpaypEJDw8eRA"
+							}
+						],
+						"url": "{{endpoint}}api/account/{{DealerAccountID}}/contentsnippets/160/hard"
+					},
+					"response": []
+				}
+			],
+			"id": "c0ecab3c-3c0a-4612-aa25-0e7b405a5f49"
+		},
+		{
 			"name": "price rule",
 			"item": [
 				{
@@ -17752,78 +17996,97 @@
 	],
 	"variable": [
 		{
+			"id": "c8ea154e-d194-42bf-bd75-759d22e054bc",
 			"key": "brandId",
 			"value": "536"
 		},
 		{
+			"id": "c02da17a-4c7c-4f0e-85b8-43fb03730e9e",
 			"key": "brandName",
 			"value": "Test Brand Production Testing Only"
 		},
 		{
+			"id": "83d5793e-3940-4338-8ab8-d4acf7ceb80c",
 			"key": "brand_Name",
 			"value": "\"Test Brand Production Testing Only\""
 		},
 		{
+			"id": "f1de3fdc-2763-448e-bef9-1f7777645592",
 			"key": "categoryId",
 			"value": "71"
 		},
 		{
+			"id": "d0371ab0-d618-488f-b14c-9c0ba17064cf",
 			"key": "attributeSchemaId",
 			"value": "379"
 		},
 		{
+			"id": "42d9ec85-4ac2-4fc8-9172-4fa3bbda037b",
 			"key": "langId_en",
 			"value": "en-us"
 		},
 		{
+			"id": "807f8131-b2e0-4773-9fd9-4ec997652930",
 			"key": "langId_fr",
 			"value": "fr-ca"
 		},
 		{
+			"id": "4dd9e478-2a6a-440c-abb6-c948e5861fff",
 			"key": "hubKey",
 			"value": "Hub_3A17F5AB-A799-4F46-A2F5-6EC927479484"
 		},
 		{
+			"id": "c4666eaa-2f1e-425a-be7e-e6a9e422d603",
 			"key": "avbId",
 			"value": "protest1"
 		},
 		{
+			"id": "1c243fdd-145c-4a52-93a8-e4dd875d797b",
 			"key": "attributeNameId",
 			"value": "100"
 		},
 		{
+			"id": "98e4b91c-d5bf-4b56-bcc5-3b1667e8042d",
 			"key": "apiKey",
 			"value": "WTEC_1e50cf49da20113c69dca5a212a793331b6db78b06686"
 		},
 		{
+			"id": "efbfe57a-7a5b-4369-913a-6c8c0bd4feeb",
 			"key": "regularPrice",
 			"value": "299.99"
 		},
 		{
+			"id": "2b41979a-3f06-4455-9b54-a35b3dd4ed1d",
 			"key": "specialPrice",
 			"value": "199.99"
 		},
 		{
+			"id": "328f7d62-d38f-4962-8333-0be31f84e591",
 			"key": "uniqId",
 			"value": ""
 		},
 		{
+			"id": "1146c091-31a7-4ac3-9701-a6e434edc348",
 			"key": "attributeNameIdValue",
 			"value": "35"
 		},
 		{
+			"id": "dcab3451-a89a-4586-8d44-522acf1aedd1",
 			"key": "firstAttributeNameId",
 			"value": ""
 		},
 		{
+			"id": "761451c9-15b1-4cea-98c3-f624e7b5adba",
 			"key": "found",
 			"value": ""
 		},
 		{
+			"id": "ea687d9d-de1e-4d86-b284-9a017b22e831",
 			"key": "attributeSimpleId",
 			"value": ""
 		},
 		{
+			"id": "b6876d80-4f16-4216-89bf-49ef673b4cae",
 			"key": "uniqId ",
 			"value": ""
 		}
