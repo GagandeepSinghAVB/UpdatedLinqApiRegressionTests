@@ -183,7 +183,7 @@
 									"}\r",
 									"\r",
 									"\r",
-									"/* Ignore - Testing the integration Test 2 */"
+									"/* Ignore - Testing the integration Test 3 */"
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -17754,78 +17754,97 @@
 	],
 	"variable": [
 		{
+			"id": "f3753af4-7768-4d9b-af79-109ff120b9f8",
 			"key": "brandId",
 			"value": "536"
 		},
 		{
+			"id": "baa92c7b-43dd-42dd-85ea-2396f8f15f81",
 			"key": "brandName",
 			"value": "Test Brand Production Testing Only"
 		},
 		{
+			"id": "4963a7a4-d82a-45b0-b047-7ea98819acba",
 			"key": "brand_Name",
 			"value": "\"Test Brand Production Testing Only\""
 		},
 		{
+			"id": "ce515e0f-e0c2-4978-870a-3359c7107b7b",
 			"key": "categoryId",
 			"value": "71"
 		},
 		{
+			"id": "a264086c-c6e6-44d5-b450-21672f49b225",
 			"key": "attributeSchemaId",
 			"value": "379"
 		},
 		{
+			"id": "f9a14956-e60d-4b41-9c78-b1914ed54506",
 			"key": "langId_en",
 			"value": "en-us"
 		},
 		{
+			"id": "9cdfac5a-a4d5-4a5e-b855-996e10aa4adc",
 			"key": "langId_fr",
 			"value": "fr-ca"
 		},
 		{
+			"id": "5972c661-5f65-4333-9404-2e573bdd9d47",
 			"key": "hubKey",
 			"value": "Hub_3A17F5AB-A799-4F46-A2F5-6EC927479484"
 		},
 		{
+			"id": "936c112d-9d8b-495b-968d-69c692cade1c",
 			"key": "avbId",
 			"value": "protest1"
 		},
 		{
+			"id": "05f55e09-d5b0-4993-a962-5c2cd01bb80a",
 			"key": "attributeNameId",
 			"value": "100"
 		},
 		{
+			"id": "6bd84978-3aa4-4d39-b7dc-14de454f5b17",
 			"key": "apiKey",
 			"value": "WTEC_1e50cf49da20113c69dca5a212a793331b6db78b06686"
 		},
 		{
+			"id": "a35f7fcb-6545-4bc1-ae43-02cb89ac2c3b",
 			"key": "regularPrice",
 			"value": "299.99"
 		},
 		{
+			"id": "ac974ed7-19e0-4fa1-9380-943cbb255315",
 			"key": "specialPrice",
 			"value": "199.99"
 		},
 		{
+			"id": "5b2ee910-e8ff-4350-9934-ea21d251fa42",
 			"key": "uniqId",
 			"value": ""
 		},
 		{
+			"id": "b3dcf0ae-c3be-4f23-9137-f8ace19627ea",
 			"key": "attributeNameIdValue",
 			"value": "35"
 		},
 		{
+			"id": "36e6a91c-d6a5-45d1-9c68-9913dea85468",
 			"key": "firstAttributeNameId",
 			"value": ""
 		},
 		{
+			"id": "8978f2f1-2458-41c5-bc3e-415af7e2dffc",
 			"key": "found",
 			"value": ""
 		},
 		{
+			"id": "6a770816-6f37-4597-b21f-7e3d9ca6c981",
 			"key": "attributeSimpleId",
 			"value": ""
 		},
 		{
+			"id": "bcca1147-89b9-4103-8570-27b0292c38d7",
 			"key": "uniqId ",
 			"value": ""
 		}
