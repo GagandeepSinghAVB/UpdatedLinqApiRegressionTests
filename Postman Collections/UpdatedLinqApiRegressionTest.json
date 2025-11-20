@@ -4956,6 +4956,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "137f187b-3e88-40c6-a6ac-a56e9c678b6c",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -4991,21 +4992,17 @@
 											"// Validate Price",
 											"pm.test(\"Price matches expected value\", function () {",
 											"    pm.expect(product.price).to.eql(expectedPrice);",
-											"});",
-											"",
-											"",
-											"",
-											""
+											"});"
 										],
 										"type": "text/javascript",
 										"packages": {},
-										"requests": {},
-										"id": "137f187b-3e88-40c6-a6ac-a56e9c678b6c"
+										"requests": {}
 									}
 								},
 								{
 									"listen": "prerequest",
 									"script": {
+										"id": "27271d2d-ec62-455b-8baf-5e9985076d74",
 										"exec": [
 											" eval(pm.environment.get(\"PMLIB\"));  // Loads pmLib\r",
 											" pmLib.checkForBearerToken();       // Generates token if needed\r",
@@ -5033,8 +5030,7 @@
 										],
 										"type": "text/javascript",
 										"packages": {},
-										"requests": {},
-										"id": "27271d2d-ec62-455b-8baf-5e9985076d74"
+										"requests": {}
 									}
 								}
 							],
@@ -18045,78 +18041,97 @@
 	],
 	"variable": [
 		{
+			"id": "78c8ce81-11db-4680-ab7d-03b8993d8e07",
 			"key": "brandId",
 			"value": "536"
 		},
 		{
+			"id": "7c3867eb-89ba-4864-abf7-8352c5b31047",
 			"key": "brandName",
 			"value": "Test Brand Production Testing Only"
 		},
 		{
+			"id": "c1c19db7-11a0-4ad3-93f8-b81fe062dcee",
 			"key": "brand_Name",
 			"value": "\"Test Brand Production Testing Only\""
 		},
 		{
+			"id": "dc36c424-89c6-449a-9704-b1f882a1a13b",
 			"key": "categoryId",
 			"value": "71"
 		},
 		{
+			"id": "aeb4183d-5f78-43da-a969-b5530b4a9abf",
 			"key": "attributeSchemaId",
 			"value": "379"
 		},
 		{
+			"id": "debef7ad-d049-4d6b-a824-c18c48849afe",
 			"key": "langId_en",
 			"value": "en-us"
 		},
 		{
+			"id": "3ddc4e88-e75b-4aec-a889-714eb2989733",
 			"key": "langId_fr",
 			"value": "fr-ca"
 		},
 		{
+			"id": "bc79f47b-62c3-4d7c-b30f-0fc47136f016",
 			"key": "hubKey",
 			"value": "Hub_3A17F5AB-A799-4F46-A2F5-6EC927479484"
 		},
 		{
+			"id": "c7cf58d8-50e0-48dd-93a9-600a0a521d10",
 			"key": "avbId",
 			"value": "protest1"
 		},
 		{
+			"id": "f50ec8c4-a8ae-4d4e-91d9-74d9eb591498",
 			"key": "attributeNameId",
 			"value": "100"
 		},
 		{
+			"id": "771ccb0c-0cf9-44c0-b38a-8cf35a4dece7",
 			"key": "apiKey",
 			"value": "WTEC_1e50cf49da20113c69dca5a212a793331b6db78b06686"
 		},
 		{
+			"id": "1b286657-267d-4486-bb05-621ccf327caf",
 			"key": "regularPrice",
 			"value": "299.99"
 		},
 		{
+			"id": "611e21ee-56e7-4614-a831-a49d62655407",
 			"key": "specialPrice",
 			"value": "199.99"
 		},
 		{
+			"id": "b8df52d3-05c6-4850-8ce9-9db4dd5dbb37",
 			"key": "uniqId",
 			"value": ""
 		},
 		{
+			"id": "83b298c0-e3f1-44c2-9a82-82543507aa77",
 			"key": "attributeNameIdValue",
 			"value": "35"
 		},
 		{
+			"id": "00d2b5a0-072d-4d5c-9b27-ca47b50b0959",
 			"key": "firstAttributeNameId",
 			"value": ""
 		},
 		{
+			"id": "d9a548bb-b436-4cd5-8829-54dd8209f274",
 			"key": "found",
 			"value": ""
 		},
 		{
+			"id": "79dea9ed-c02c-42ee-aa6f-f2acc72569ca",
 			"key": "attributeSimpleId",
 			"value": ""
 		},
 		{
+			"id": "1e194fab-5cf2-4728-82d1-1f7f1ddc0984",
 			"key": "uniqId ",
 			"value": ""
 		}
