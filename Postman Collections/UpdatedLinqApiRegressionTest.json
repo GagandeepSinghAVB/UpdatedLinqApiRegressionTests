@@ -11256,6 +11256,61 @@
 								"description": "Gets all Categories, returning a list of them."
 							},
 							"response": []
+						},
+						{
+							"name": "Gets Sales Copy 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c24e9a74-fda9-48ec-b305-67eddd1a8737",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// pm.test(\"Response returns sales data' \", function () {\r",
+											"//     pm.expect(pm.response.text()).to.include(\"externalOrderNumber\");\r",
+											"// });\r",
+											"\r",
+											"const response = pm.response.json();\r",
+											"console.log(\"FULL API Response\", JSON.stringify(response, null, 2));"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "79b8760a-efd3-4afd-aedd-9dbca0f7f905",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-AVB-ApiKey",
+										"value": "{{hubKey}}"
+									},
+									{
+										"key": "X-AVB-AvbId",
+										"value": "{{avbId}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ids\": [\r\n    0\r\n  ],\r\n  \"startDate\": \"2025-11-25T18:10:53.951Z\",\r\n  \"endDate\": \"2025-11-25T18:10:53.951Z\",\r\n  \"page\": 2147483647,\r\n  \"store\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{publicEndPoint}}/api/internal/sales/search",
+								"description": "Gets all Categories, returning a list of them."
+							},
+							"response": []
 						}
 					],
 					"id": "a4a687b1-e96c-472d-a235-4e0b49e57278"
