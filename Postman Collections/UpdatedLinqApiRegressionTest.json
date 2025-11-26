@@ -5500,6 +5500,279 @@
 					"id": "8c4c00a5-11c2-456c-8670-d90a842ccaf2"
 				},
 				{
+					"name": "Magento sales",
+					"item": [
+						{
+							"name": "Create magento sale",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "a08075e3-d270-4171-8caf-51503561e030",
+										"exec": [
+											"// Get today's date\r",
+											"const today = new Date();\r",
+											"\r",
+											"// Format function to convert date to DD-MMM-YYYY\r",
+											"function formatDate(date) {\r",
+											"    const day = (\"0\" + date.getDate()).slice(-2);\r",
+											"\r",
+											"    const monthNames = [\"JAN\",\"FEB\",\"MAR\",\"APR\",\"MAY\",\"JUN\",\"JUL\",\"AUG\",\"SEP\",\"OCT\",\"NOV\",\"DEC\"];\r",
+											"    const month = monthNames[date.getMonth()];\r",
+											"\r",
+											"    const year = date.getFullYear();\r",
+											"\r",
+											"    return `${day}-${month}-${year}`;\r",
+											"}\r",
+											"\r",
+											"// End Date = today\r",
+											"const endDate = formatDate(today);\r",
+											"\r",
+											"// Start Date = 1 month earlier\r",
+											"const startDateObj = new Date();\r",
+											"startDateObj.setMonth(startDateObj.getMonth() - 1);\r",
+											"\r",
+											"const startDate = formatDate(startDateObj);\r",
+											"\r",
+											"// Save as Postman variables\r",
+											"pm.environment.set(\"startDate\", startDate);\r",
+											"pm.environment.set(\"endDate\", endDate);\r",
+											"\r",
+											"console.log(\"Start Date:\", startDate);\r",
+											"console.log(\"End Date:\", endDate);\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "de18b97c-58dd-4608-8f28-2e230da1262a",
+										"exec": [
+											"let response = pm.response.json();\r",
+											"\r",
+											"// Check response status code is 200\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Verify response has key 'orders'\r",
+											"pm.test(\"Response contains 'orders' field\", function () {\r",
+											"    pm.expect(response).to.have.property(\"orders\");\r",
+											"});\r",
+											"\r",
+											"// Verify 'orders' is an array\r",
+											"pm.test(\"'orders' is an array\", function () {\r",
+											"    pm.expect(response.orders).to.be.an(\"array\");\r",
+											"});\r",
+											"\r",
+											"// Verify 'orders' array is empty\r",
+											"pm.test(\"'orders' array is empty\", function () {\r",
+											"    pm.expect(response.orders.length).to.eql(0);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "0aa7531b-4bb9-4a4f-9e5f-44ec72426e0a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-AVB-ApiKey",
+										"value": "{{Api Key}}",
+										"type": "text"
+									},
+									{
+										"key": "X-AVB-AvbId",
+										"value": "{{AvbId}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ids\": [\r\n    0\r\n  ],\r\n  \"startDate\": \"{{startDate}}\",\r\n  \"endDate\": \"{{endDate}}\",\r\n  \"page\": 2147483647,\r\n  \"store\": \"{{avbId}}\"\r\n}\r\n"
+								},
+								"url": "{{publicEndPoint}}/sales/search"
+							},
+							"response": []
+						},
+						{
+							"name": "Get magento Sale",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "a08075e3-d270-4171-8caf-51503561e030",
+										"exec": [
+											"// Get today's date\r",
+											"const today = new Date();\r",
+											"\r",
+											"// Format function to convert date to DD-MMM-YYYY\r",
+											"function formatDate(date) {\r",
+											"    const day = (\"0\" + date.getDate()).slice(-2);\r",
+											"\r",
+											"    const monthNames = [\"JAN\",\"FEB\",\"MAR\",\"APR\",\"MAY\",\"JUN\",\"JUL\",\"AUG\",\"SEP\",\"OCT\",\"NOV\",\"DEC\"];\r",
+											"    const month = monthNames[date.getMonth()];\r",
+											"\r",
+											"    const year = date.getFullYear();\r",
+											"\r",
+											"    return `${day}-${month}-${year}`;\r",
+											"}\r",
+											"\r",
+											"// End Date = today\r",
+											"const endDate = formatDate(today);\r",
+											"\r",
+											"// Start Date = 1 month earlier\r",
+											"const startDateObj = new Date();\r",
+											"startDateObj.setMonth(startDateObj.getMonth() - 1);\r",
+											"\r",
+											"const startDate = formatDate(startDateObj);\r",
+											"\r",
+											"// Save as Postman variables\r",
+											"pm.environment.set(\"startDate\", startDate);\r",
+											"pm.environment.set(\"endDate\", endDate);\r",
+											"\r",
+											"console.log(\"Start Date:\", startDate);\r",
+											"console.log(\"End Date:\", endDate);\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "de18b97c-58dd-4608-8f28-2e230da1262a",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Parse response JSON\r",
+											"let jsonData = pm.response.json();\r",
+											"\r",
+											"// --- Top-Level Checks ---\r",
+											"pm.test(\"Response contains orders array\", function () {\r",
+											"    pm.expect(jsonData).to.have.property(\"orders\");\r",
+											"    pm.expect(jsonData.orders).to.be.an(\"array\");\r",
+											"    pm.expect(jsonData.orders.length).to.be.above(0);\r",
+											"});\r",
+											"\r",
+											"// Get first order\r",
+											"let order = jsonData.orders[0];\r",
+											"\r",
+											"// --- Order Level Checks ---\r",
+											"pm.test(\"Validate required order fields\", function () {\r",
+											"    pm.expect(order).to.have.property(\"entity_id\");\r",
+											"    pm.expect(order).to.have.property(\"status\");\r",
+											"    pm.expect(order).to.have.property(\"shipping_description\");\r",
+											"    pm.expect(order).to.have.property(\"base_grand_total\");\r",
+											"    pm.expect(order).to.have.property(\"grand_total\");\r",
+											"    pm.expect(order).to.have.property(\"store_code\", \"protest1\");\r",
+											"    pm.expect(order).to.have.property(\"payment_method\");\r",
+											"});\r",
+											"\r",
+											"// --- Order Comments Checks ---\r",
+											"pm.test(\"Order comments are present\", function () {\r",
+											"    pm.expect(order.order_comments).to.be.an(\"array\");\r",
+											"    pm.expect(order.order_comments.length).to.be.above(0);\r",
+											"\r",
+											"    let commentEntry = order.order_comments.find(c => c.comment);\r",
+											"    pm.expect(commentEntry.comment).to.include(\"Payment method is in skip list\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "4229a59d-2b7a-4ee3-8d65-321249bb39d2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-AVB-ApiKey",
+										"value": "{{Api Key}}",
+										"type": "text"
+									},
+									{
+										"key": "X-AVB-AvbId",
+										"value": "{{AvbId}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{PublicApiEndpoint}}/sales/search?startDate={{startDate}}&endDate={{endDate}}",
+									"host": [
+										"{{PublicApiEndpoint}}"
+									],
+									"path": [
+										"sales",
+										"search"
+									],
+									"query": [
+										{
+											"key": "ids",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "startDate",
+											"value": "{{startDate}}"
+										},
+										{
+											"key": "endDate",
+											"value": "{{endDate}}"
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "store",
+											"value": "{{AvbId}}",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "9f4e0149-18e0-4596-8875-cc8acc5dac72"
+				},
+				{
 					"name": "Get Products by ProductID (Localization - French)",
 					"event": [
 						{
