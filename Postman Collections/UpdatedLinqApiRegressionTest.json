@@ -5605,7 +5605,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"ids\": [\r\n    0\r\n  ],\r\n  \"startDate\": \"{{startDate}}\",\r\n  \"endDate\": \"{{endDate}}\",\r\n  \"page\": 2147483647,\r\n  \"store\": \"{{avbId}}\"\r\n}\r\n"
+									"raw": "{\r\n  \"ids\": [\r\n    0\r\n  ],\r\n  \"startDate\": \"{{startDate}}\",\r\n  \"endDate\": \"{{endDate}}\",\r\n  \"page\": 0,\r\n  \"store\": \"{{avbId}}\"\r\n}\r\n"
 								},
 								"url": "{{publicEndPoint}}/sales/search"
 							},
@@ -5713,12 +5713,12 @@
 								"header": [
 									{
 										"key": "X-AVB-ApiKey",
-										"value": "{{Api Key}}",
+										"value": "{{apiKey}}",
 										"type": "text"
 									},
 									{
 										"key": "X-AVB-AvbId",
-										"value": "{{AvbId}}",
+										"value": "{{avbId}}",
 										"type": "text"
 									},
 									{
@@ -5732,9 +5732,9 @@
 									"formdata": []
 								},
 								"url": {
-									"raw": "{{PublicApiEndpoint}}/sales/search?startDate={{startDate}}&endDate={{endDate}}",
+									"raw": "{{publicEndPoint}}/sales/search?startDate={{startDate}}&endDate={{endDate}}",
 									"host": [
-										"{{PublicApiEndpoint}}"
+										"{{publicEndPoint}}"
 									],
 									"path": [
 										"sales",
@@ -5761,7 +5761,7 @@
 										},
 										{
 											"key": "store",
-											"value": "{{AvbId}}",
+											"value": "{{avbId}}",
 											"disabled": true
 										}
 									]
